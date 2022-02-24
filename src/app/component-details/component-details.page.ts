@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NavController, Events, IonInfiniteScroll } from '@ionic/angular';
+
+import { Events } from '../event.service';
+import { NavController, IonInfiniteScroll } from '@ionic/angular';
 import { CustomThemeService } from '../services/custom-theme.service';
 
 @Component({

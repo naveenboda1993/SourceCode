@@ -24,10 +24,16 @@ export class ToastMiddlePage implements OnInit {
         const toast = await this.toast.create({
             cssClass: 'toastTag',
             color: "primary",
-            showCloseButton: true,
+            // showCloseButton: true,
             position: 'middle',
             message: "Hello this is middle Toast",
-            closeButtonText: '| Done',
+            // closeButtonText: '| Done',
+            buttons: [
+                {
+                  text: 'Done',
+                  role: 'cancel',
+                }
+              ],
             duration: 2000,
         });
         toast.present();

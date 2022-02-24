@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomThemeService } from '../services/custom-theme.service';
-import { Events } from '@ionic/angular';
+import { Events } from '../event.service';
 
 @Component({
   selector: 'app-fab-up-icon',

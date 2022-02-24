@@ -22,10 +22,16 @@ export class ToastTopPage implements OnInit {
         const toast = await this.toastCtrl.create({
             cssClass: 'toastTag',
             color: "primary",
-            showCloseButton: true,
+            // showCloseButton: true,
             position: 'top',
             message: "Hello this is middle Toast",
-            closeButtonText: '| Done',
+            // closeButtonText: '| Done',
+            buttons: [
+                {
+                  text: 'Done',
+                  role: 'cancel',
+                }
+              ],
             duration: 2000,
         });
         toast.present();

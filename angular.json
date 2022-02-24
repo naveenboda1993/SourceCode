@@ -39,11 +39,10 @@
                 "input": "src/global.scss"
               },
               {
-                "input": "src/app/app.scss"
+                "input": "src/app/app.component.scss"
               }
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MenuController, ModalController, NavController, IonSlides, Events } from '@ionic/angular';
+import { Events } from '../event.service';
+import { MenuController, ModalController, NavController, IonSlides } from '@ionic/angular';
 import { ThemeService } from '../services/theme.service';
 import { ViewChild } from '@angular/core';
 import { CustomThemeService } from '../services/custom-theme.service';

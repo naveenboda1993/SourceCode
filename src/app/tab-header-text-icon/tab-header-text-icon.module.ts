@@ -12,15 +12,17 @@ const routes: Routes = [
     children: [
       {
         path: 'tab-chat',
-        loadChildren: '../tab-chat/tab-chat.module#TabChatPageModule'
+        loadChildren: () => import('../tab-chat/tab-chat.module').then(x => x.TabChatPageModule)
+
       },
       {
         path: 'tab-status',
-        loadChildren: '../tab-status/tab-status.module#TabStatusPageModule'
+        loadChildren: () => import('../tab-status/tab-status.module').then(x => x.TabStatusPageModule)
+
       },
       {
         path: 'tab-call',
-        loadChildren: '../tab-call/tab-call.module#TabCallPageModule'
+        loadChildren: () => import('../tab-call/tab-call.module').then(x => x.TabCallPageModule)
       }
     ]
   },

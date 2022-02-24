@@ -1,34 +1,32 @@
 import { Component } from '@angular/core';
 import { ElementRef } from '@angular/core';
-import { Platform, Events, NavController, ModalController, MenuController } from '@ionic/angular';
+import { Events } from './event.service';
+import { Platform, NavController, ModalController, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { Storage } from '@ionic/storage-angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styles: ['app.scss']
+  styleUrls: ["./app.scss"]
 })
 export class AppComponent {
   itemColor: any;
   public iconColorVar = "";
   // For Menu 1
+
+
+
+
+
   public appPages = [
-    //  {
-    //    title: 'HOME',
-    //    url: '/home',
-    //    icon: 'home'
-    //  },
+    
     {
-      title: 'COMPONENTS',
-      url: '',
-      icon: 'list'
+      title: `COMPONENTS`,
+      url: ``,
+      icon: `list`
     },
-    // {
-    //   title: 'UI/UX Themes',
-    //   url: '/ui-ux-themes',
-    //   icon: 'list'
-    // }
+    
   ];
 
   // For Menu 2
@@ -568,7 +566,8 @@ export class AppComponent {
     private navCtrl: NavController,
     private events: Events,
     public statusbar: StatusBar,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private storage: Storage
   ) {
     //for status bar
     this.initializeApp();
@@ -1015,8 +1014,9 @@ export class AppComponent {
   }
 
   /////
-  ngOnInit() {
-    this.menuCtrl.enable(true, 'Menu1')
+  async  ngOnInit() {
+    this.menuCtrl.enable(true, 'Menu1');
+    await this.storage.create();
   }
   initializeApp() {
     this.platform.ready().then(() => {

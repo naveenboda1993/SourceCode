@@ -12,21 +12,26 @@ const routes: Routes = [
     path: 'badge-with-tab',
     component: BadgeWithTabPage,
     children: [
-    { path: 'badge-movie',
-      loadChildren: '../badge-movie/badge-movie.module#BadgeMoviePageModule'
-    },
-    { path: 'badge-card',
-      loadChildren: '../badge-card/badge-card.module#BadgeCardPageModule' 
-    },
-    { path: 'badge-setting',
-      loadChildren: '../badge-setting/badge-setting.module#BadgeSettingPageModule' 
-    }
-  ]
+      {
+        path: 'badge-movie',
+        loadChildren: () => import('../badge-movie/badge-movie.module').then(x => x.BadgeMoviePageModule)
+      },
+      {
+        path: 'badge-card',
+        loadChildren: () => import('../badge-card/badge-card.module').then(x => x.BadgeCardPageModule)
+
+      },
+      {
+        path: 'badge-setting',
+        loadChildren: () => import('../badge-setting/badge-setting.module').then(x => x.BadgeSettingPageModule)
+
+      }
+    ]
   },
   {
-    path:'',
-    redirectTo:'badge-with-tab/badge-setting',
-    pathMatch:'full'
+    path: '',
+    redirectTo: 'badge-with-tab/badge-setting',
+    pathMatch: 'full'
   }
 ];
 
@@ -39,4 +44,4 @@ const routes: Routes = [
   ],
   declarations: [BadgeWithTabPage]
 })
-export class BadgeWithTabPageModule {}
+export class BadgeWithTabPageModule { }

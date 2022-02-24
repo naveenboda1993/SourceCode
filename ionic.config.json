@@ -1,7 +1,8 @@
 {
   "name": "ionic-material-design-t1",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

@@ -22,10 +22,16 @@ export class ToastBottomPage implements OnInit {
         const toast = await this.toast.create({
             cssClass: 'toastTag',
             color: "danger",
-            showCloseButton: true,
+            // showCloseButton: true,
             position: 'bottom',
             message: "Error!!! Please enter correct crdentials",
-            closeButtonText: '| Done',
+            // closeButtonText: '| Done',
+            buttons: [
+                {
+                  text: 'Done',
+                  role: 'cancel',
+                }
+              ],
             duration: 2000
         });
         toast.present();

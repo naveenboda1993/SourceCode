@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Events } from '@ionic/angular';
+import { Events } from '../event.service';
 import { CustomThemeService } from '../services/custom-theme.service';
 
 
