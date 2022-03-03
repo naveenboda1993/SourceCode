@@ -136,9 +136,10 @@ export class HomePage {
     this.menuCtrl.enable(true, 'Menu1')
     this.menuCtrl.open('Menu1');
     this.theme.getTheme().then((result) => {
-      let val = result;
+      let val = 'neon';
+      console.log(val)
       if (val == undefined) {
-        this.theme.setTheme(themes['autumn'], 'autumn');
+        this.theme.setTheme(themes['neon'], 'neon');
       }
       else {
         this.changeTheme(val);

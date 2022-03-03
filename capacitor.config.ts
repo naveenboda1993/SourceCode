@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ionic-material-design-t1',
+  appId: 'com.naveenboda.veda',
+  appName: 'Vedas Soultions',
   webDir: 'www',
   bundledWebRuntime: false,
   cordova: {
